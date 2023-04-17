@@ -20,10 +20,9 @@ def user(request):
         'general': general,
         'user': user
     }
-    if request.resolver_match.url_name == 'current':
-        url = 'API/current.html'
-    elif request.resolver_match.url_name == 'remote':
-        url = 'API/remote.html'
+    url = 'API/current.html' \
+        if request.resolver_match.url_name == 'current' \
+        else 'API/remote.html'
 
     return render(request, url, context)
 
