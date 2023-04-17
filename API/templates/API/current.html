@@ -1,0 +1,244 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>Welcome {{ user.username }}</h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-4 col-sm-8">
+            <h2>Current User Information</h2>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th colspan="2">IP Address:</th>
+                        <td colspan="4">{{ user.0.IP_address }}</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th colspan="2">IP Type:</th>
+                        <td colspan="4">{{ user.0.IP_type }}</td>
+                    </tr>
+                    <tr>
+                        <th class="col-md-1" scope="row">Continent Code:</th>
+                        <td class="col-md-1">{{ user.0.conti_code }}</td>
+                        <th class="col-md-1" scope="row">Continent Name:</th>
+                        <td class="col-md-1">{{ user.0.conti_name }}</td>
+                        <th class="col-md-1" scope="row">Country Code:</th>
+                        <td class="col-md-1">{{ user.0.count_code }}</td>
+                    </tr>
+                    <tr>
+                        <th class="col-md-1" scope="row">Country Name:</th>
+                        <td class="col-md-1">{{ user.0.count_name }}</td>
+                        <th class="col-md-1" scope="row">Region Name:</th>
+                        <td class="col-md-1">{{ user.0.region_name }}</td>
+                        <th class="col-md-1" scope="row">Region Code:</th>
+                        <td class="col-md-1">{{ user.0.region_code }}</td>
+                    </tr>
+                    <tr>
+                        <th colspan="1">City:</th>
+                        <td colspan="3">{{ user.0.city }}</td>
+                        <th colspan="1">ZIP Code:</th>
+                        <td colspan="1">{{ user.0.zip }}</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                {% block content1 %}
+                {% endblock %}
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-8">
+            <h2>Weather Data</h2>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <th scope="col" class="col-md-2">Location:</th>
+
+                    <td class="col-md-1" scope="row">{{ weather.0.location }}
+                    </td>
+
+                    <tbody>
+                    <tr>
+                        <th scope="col" class="col-md-2">Region:</th>
+                        <td class="col-md-1" scope="row">{{ weather.0.region }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Country:</th>
+                        <td class="col-md-1" scope="row">{{ weather.0.country }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Time Zone:</th>
+                        <td class="col-md-1" scope="row">{{ weather.0.timezone }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Local Time:</th>
+                        <td class="col-md-1" scope="row">{{ weather.0.local_time }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Latitude:</th>
+                        <td class="col-md-1" scope="row">{{ weather.0.latitude }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Longitude:</th>
+                        <td class="col-md-1" scope="row">{{ weather.0.longitude }}
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-8">
+            <h2>Air Quality</h2>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <th scope="col" class="col-md-2">Carbon Monoxide</th>
+                    <td class="col-md-1" scope="row">{{ air.0.CO }}</td>
+                    <tbody>
+                    <tr>
+                        <th scope="col" class="col-md-2">NOx</th>
+                        <td class="col-md-1" scope="row">{{ air.0.NO }} ppm
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Ozone</th>
+                        <td class="col-md-1" scope="row">{{ air.0.Ozone }} ppm
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Sulfur Dioxide</th>
+                        <td class="col-md-1" scope="row">{{ air.0.SO }} ppm
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Fine Particulates</th>
+                        <td class="col-md-1" scope="row">{{ air.0.fine_particulates }} ppm
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">ULTRA Fine Particulates</th>
+                        <td class="col-md-1" scope="row">{{ air.0.ultra_fine }} ppm
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">USA EPA index</th>
+                        <td class="col-md-1" scope="row">{{ air.0.EPA_index }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">EU Daily Air Quality Index</th>
+                        <td class="col-md-1" scope="row">{{ air.0.AirQuality_index }}
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <h2>Weather Information</h2>
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3>Weather & Temperature</h3>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <th scope="col" class="col-md-2">Temperature (C)</th>
+                    <td class="col-md-1" scope="row">{{ temperature.0.c_temp }}</td>
+                    <tbody>
+                    <tr>
+                        <th scope="col" class="col-md-2">Temperature (F)</th>
+                        <td class="col-md-1" scope="row">{{ temperature.0.f_temp }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Humidity</th>
+                        <td class="col-md-1" scope="row">{{ temperature.0.humidity }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Feels like (C)</th>
+                        <td class="col-md-1" scope="row">{{ temperature.0.c_feel }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Feels like (f)</th>
+                        <td class="col-md-1" scope="row">{{ temperature.0.f_feel }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Wind Speed (kph)</th>
+                        <td class="col-md-1" scope="row">{{ temperature.0.windspeed_kph }} km/h</td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Wind Speed</th>
+                        <td class="col-md-1" scope="row">{{ temperature.0.windspeed_mph }} mph</td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Wind Direction</th>
+                        <td class="col-md-1" scope="row">{{ temperature.0.wind_direction }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Wind Direction Degree</th>
+                        <td class="col-md-1" scope="row">{{ temperature.0.wind_degree }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Expected Precipitation (mm)</th>
+                        <td class="col-md-1" scope="row">{{ temperature.0.precipitation_mm }} mm</td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Expected Precipitation (in)</th>
+                        <td class="col-md-1" scope="row">{{ temperature.0.precipitation_in }} in</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3>General</h3>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <th scope="col" class="col-md-1">Last Updated</th>
+                    <td class="col-md-2" scope="row">{{ general.0.last_updated }}</td>
+                    <tbody>
+                    <tr>
+                        <th scope="col" class="col-md-2">Time of Day</th>
+                        <td class="col-md-1" scope="row">{{ general.0.timeofDay }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Cloud Cover%</th>
+                        <td class="col-md-1" scope="row">{{ general.0.cloud }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Condition</th>
+                        <td class="col-md-1" scope="row"><img src="{{ general.0.condition }}" alt="condition"></td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">UV</th>
+                        <td class="col-md-1" scope="row">{{ general.0.UV }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Visibility (km)</th>
+                        <td class="col-md-1" scope="row">{{ general.0.visibility_km }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Visibility (miles)</th>
+                        <td class="col-md-1" scope="row">{{ general.0.visibility_miles }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Pressure (milliBar)</th>
+                        <td class="col-md-1" scope="row">{{ general.0.pressure_mb }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-md-2">Pressure (in-water)</th>
+                        <td class="col-md-1" scope="row">{{ general.0.pressure_water }}</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

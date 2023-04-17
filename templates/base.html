@@ -1,0 +1,55 @@
+<!--
+  ~ Copyright (c) 2023 - All rights reserved.
+  ~ Created by Peter Lin for PROCTECH 4IT3/SEP 6IT3.
+  ~
+  ~ SoA Notice: I Peter Lin, 400270145 certify that this material is my original work.
+  ~ I certify that no other person's work has been used without due acknowledgement.
+  ~ I have also not made my work available to anyone else without their due acknowledgement.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <title>{{ django|title }}</title>
+    {% load static %}
+    <meta name="viewport" content="width=device-width initial-scale=1.0"/>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" crossorigin="anonymous">
+    <script src="{% static 'js/bootstrap.bundle.js' %}"
+            crossorigin="anonymous"></script>
+    <link href="{% static 'icons/bootstrap-icons.css' %}" rel="stylesheet" crossorigin="anonymous" type="text/css">
+    <link href="{% static 'css/inversion.css' %}" rel="stylesheet" crossorigin="anonymous" type="text/css">
+    {% block heading_content %}
+    {% endblock %}
+</head>
+<body>
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+	<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+		<svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" class="bi bi-cloud-rain" viewBox="0 0 16 16">
+			<path d="M4.158 12.025a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317zm3 0a.5.5 0 0 1 .316.633l-1 3a.5.5 0 0 1-.948-.316l1-3a.5.5 0 0 1 .632-.317zm3 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317zm3 0a.5.5 0 0 1 .316.633l-1 3a.5.5 0 1 1-.948-.316l1-3a.5.5 0 0 1 .632-.317zm.247-6.998a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 11H13a3 3 0 0 0 .405-5.973zM8.5 2a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1 0 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4.002 4.002 0 0 1 8.5 2z"></path>
+		</svg>
+		<span class="fs-4">Weather Information</span>
+	</a>
+	<ul class="nav nav-pills p-3">
+		<li class="nav-item"><a href="/current/" class="nav-link ">Current Location</a>
+		</li>
+		<li class="nav-item">
+			<a href="/remote/" class="nav-link ">Different Location</a>
+		</li>
+	</ul>
+</header>
+
+{% block content %}
+
+{% endblock %}
+
+<footer class="mt-auto py-3 text-center fixed-bottom">
+	<div class="container">
+        <span class="text-muted">
+            Peter Lin - © 2023
+        </span>
+	</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% extends 'API/current.html' %}
+{% load static %}
+
+{% block content1 %}
+
+<form method="get" action="/remote/">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="location-request">Search</span>
+            <input type="text" class="form-control" placeholder="City Name" aria-label="Username"
+                   aria-describedby="location-request" name="location">
+        </div>
+        <div class="float-end">
+            <button type="reset" class="btn btn-danger">RESET</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+
+    </form>
+
+{% endblock %}

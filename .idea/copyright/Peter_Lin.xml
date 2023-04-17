@@ -1,0 +1,6 @@
+<component name="CopyrightManager">
+  <copyright>
+    <option name="notice" value="Copyright (c) &amp;#36;originalComment.match(&quot;Copyright \(c\) (\d+)&quot;, 1, &quot;-&quot;, &quot;&amp;#36;today.year&quot;)&amp;#36;today.year - All rights reserved.&#10;Created by Peter Lin for PROCTECH 4IT3/SEP 6IT3.  &#10;&#10;SoA Notice: I Peter Lin, 400270145 certify that this material is my original work.&#10;I certify that no other person's work has been used without due acknowledgement.&#10;I have also not made my work available to anyone else without their due acknowledgement. " />
+    <option name="myName" value="Peter Lin" />
+  </copyright>
+</component>
