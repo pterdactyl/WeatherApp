@@ -7,6 +7,13 @@
     <list default="true" id="b0d9997e-6fe7-4bd4-bc04-f0d9038794d4" name="Changes" comment="Update Final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalExam/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalExam/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalExam/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalExam/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalExam/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalExam/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,26 +45,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/unforgiven/PycharmProjects/FinalExam/static/icons",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.django.DjangoModulesConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/unforgiven/PycharmProjects/FinalExam/static/icons&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.django.DjangoModulesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/icons" />
@@ -75,8 +82,8 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="DJANGO_SETTINGS_MODULE" value="FinalExam.settings" />
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="FinalExam.settings" />
       </envs>
       <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
       <option name="SDK_NAME" value="Python 3.9 (FinalExam)" />
@@ -96,7 +103,9 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
@@ -127,7 +136,8 @@
       <updated>1681442851086</updated>
       <workItem from="1681442863606" duration="19000" />
       <workItem from="1681442888053" duration="2637000" />
-      <workItem from="1681517222144" duration="35901000" />
+      <workItem from="1681517222144" duration="35927000" />
+      <workItem from="1704832070438" duration="300000" />
     </task>
     <task id="LOCAL-00001" summary="Update Final">
       <created>1681702184702</created>
@@ -136,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681702184702</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update Final">
+      <created>1681703305105</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681703305105</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
